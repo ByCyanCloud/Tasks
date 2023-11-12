@@ -176,9 +176,9 @@ Git是一个基于Linux内核开发的版本控制工具,采用分布式版本�
       1. 第一次从本地向远程仓库推送内容
 
          > ```
-         > $ git push -u origin master
-         > 推送的是本地的 master 分支
-         > -u 参数是将本地的 master 分支和远程仓库的 master 分支关联,简化后续的推送
+         > $ git push -u origin <分支>
+         > 推送的是本地的 <分支>
+         > -u 参数是将本地的 <分支> 和远程仓库的 <分支> 关联,简化后续的推送
          > ```
 
       2. 第一次使用 ***clone*** 或者 ***push*** 时有 SSH 警告,验证key的信息是否源于 github 确认后输入 yes 就行了
@@ -186,7 +186,7 @@ Git是一个基于Linux内核开发的版本控制工具,采用分布式版本�
       3. 后续从本地向远程仓库推送内容
 
          > ```
-         > $ git push origin master
+         > $ git push origin <分支>
          > ```
 
    4. 解除与远程库关联
