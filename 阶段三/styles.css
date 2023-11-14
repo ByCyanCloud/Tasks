@@ -1,0 +1,51 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: cyan;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.scores,
+.highScores {
+  font-size: 18px;
+  margin: 10px;
+  color: #333;
+}
+
+div {
+  margin: 10px;
+}
+
+.agains,
+.renews {
+  background-color: #2196f3;
+}
+
+.agains:hover,
+.renews:hover {
+  background-color: #0b7dda;
+}
