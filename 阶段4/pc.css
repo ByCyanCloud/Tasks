@@ -1,0 +1,527 @@
+a:focus {
+  outline: none;
+}
+
+body {
+  min-width: 1200px;
+}
+
+/*去除列表和标签的默认样式*/
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*用clearfix类解决高度塌陷*/
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*设置顶部导航条的样式*/
+#top-nav {
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+  border-radius: 20px;
+  opacity: 0.85;
+  margin: 10px 15px;
+}
+
+#top-nav li {
+  flex: auto;
+  line-height: 55px;
+  padding-left: 32px;
+  padding-right: 3px;
+  margin-left: -5%;
+}
+/*添加下拉二维码*/
+#introduction {
+  position: relative;
+}
+#QRcode {
+  left: 100px;
+  top: 65px;
+  height: 0px;
+  width: 180px;
+  position: absolute;
+  border-radius: 8px;
+  height: 0px;
+  transition: height 0.4s;
+  overflow: hidden;
+  text-align: center;
+}
+#QRcode p {
+  line-height: 10px;
+  margin-top: -10px;
+}
+#intro:hover #QRcode {
+  height: 200px;
+  background-color: white;
+  border: 5px solid coral;
+}
+/*小三角*/
+#intro:hover::after {
+  display: block;
+}
+#intro::after {
+  content: "";
+  border: 10px solid transparent;
+  border-top: none;
+  border-bottom-color: coral;
+  position: absolute;
+  left: 190px;
+  display: none;
+  transition: all 0.4s;
+}
+
+/*导航条样式*/
+#about a,
+#introduction a,
+#qa a,
+#contact a {
+  font-size: 25px;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  color: aliceblue;
+  transition: all 0.5s;
+  border-radius: 20px;
+}
+
+/*导航条悬浮样式*/
+#about a:hover,
+#introduction a:hover,
+#qa a:hover,
+#contact a:hover {
+  background-color: coral;
+  color: gray;
+}
+
+/*设置导航条NT的字体*/
+#newthread a {
+  color: slategray;
+  font-size: 30px;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 25px;
+  border-radius: 20px;
+}
+#newthread a:hover {
+  color: aliceblue;
+  background-color: coral;
+  transition: all 0.8s;
+}
+
+/*设置导航条悬浮*/
+nav {
+  position: sticky;
+  top: 5px;
+  z-index: 999;
+}
+
+/*设置首页背景*/
+#background-img {
+  position: relative;
+}
+#background-img img {
+  width: 100%;
+}
+#geek {
+  position: absolute;
+  top: 10%;
+  left: 37%;
+}
+#geek img {
+  width: 50%;
+  transition: transform 0.7s;
+}
+#geek img:hover {
+  transform: scale(1.4);
+}
+
+/*设置过渡*/
+#pass-text {
+  width: 40%;
+  margin: -10% auto 0;
+  text-align: center;
+}
+h1 {
+  font-size: 60px;
+  color: darkblue;
+  display: inline-block;
+}
+
+/*设置介绍主题*/
+.introduction-wrapper {
+  margin-top: 100px;
+}
+
+/*设置介绍卡片*/
+#text-wrapper {
+  width: 80%;
+  margin: 25px auto;
+  border: 5px solid gray;
+  border-radius: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s;
+}
+
+#text-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/*设置人物图片*/
+
+#text-wrapper img {
+  width: 30%;
+  transition: transform 0.8s;
+}
+#text-wrapper .right:hover {
+  transform: rotate(-0.05turn);
+}
+#text-wrapper .left:hover {
+  transform: rotate(0.05turn);
+}
+
+.left {
+  float: left;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+.right {
+  float: right;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+
+/*设置介绍文本*/
+#textr,
+#textl {
+  width: 65%;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+  font-size: 40px;
+}
+#main-text {
+  font-size: 25px;
+  margin: 0% 3% 4% 3%;
+}
+/*设置左右的文本边距*/
+#textl h2 {
+  padding-left: 8%;
+}
+#textl h3 {
+  padding-left: 5%;
+}
+
+/*设置右文字浮动和边距*/
+#textr {
+  float: right;
+}
+#textr h3 {
+  padding-right: 3%;
+}
+
+/*设置关于块*/
+.about-wrapper {
+  width: 85%;
+  margin: 120px auto;
+  position: relative;
+  border: 10px gray solid;
+  border-radius: 20px;
+  background-color: rgba(255, 253, 245);
+}
+.about-wrapper img {
+  margin: auto;
+  display: block;
+}
+#about-box {
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+#about-1,
+#about-2,
+#about-3 {
+  float: left;
+  width: 20%;
+  border: 8px solid purple;
+  border-radius: 30px;
+  margin: 15% 5.65% 14%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.about-wrapper div p {
+  padding-top: 15%;
+  padding-left: 9%;
+  padding-right: 8%;
+  font-size: 20px;
+}
+
+/*调整图片四角边框*/
+#rt {
+  position: absolute;
+  right: -5%;
+  top: -3%;
+}
+#rb {
+  position: absolute;
+  right: -5%;
+  bottom: 0;
+}
+#lt {
+  position: absolute;
+  left: -5%;
+  top: -3%;
+}
+#lb {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+}
+#hudie {
+  position: absolute;
+  right: 3%;
+  bottom: 6%;
+  cursor: pointer;
+}
+
+/*设置中间关于文字*/
+#center-ab {
+  font-size: 65px;
+  color: grey;
+  width: 45%;
+  margin: 2% auto -10%;
+  text-align: center;
+}
+
+#about-1,
+#about-2,
+#about-3 {
+  transition: transform 0.5s;
+}
+#about-1:hover,
+#about-2:hover,
+#about-3:hover {
+  transform: scale(1.15);
+}
+#hudie {
+  transition: transform 0.5s;
+}
+#hudie:hover {
+  transform: translateY(15px);
+}
+
+/*设置联系块*/
+.contact-wrapper {
+  width: 85%;
+  margin: 150px auto 100px;
+  border: 10px solid darkcyan;
+  position: relative;
+  border-radius: 20px;
+  padding-bottom: 100px;
+}
+
+/*调整图片的定位*/
+#l-tree {
+  position: absolute;
+  top: -8%;
+}
+#r-tree {
+  position: absolute;
+  right: -3%;
+  bottom: -8%;
+}
+#bsl {
+  position: absolute;
+  right: 10%;
+  bottom: -8%;
+}
+
+#ladybug {
+  position: absolute;
+  bottom: -5%;
+  left: -2%;
+  cursor: pointer;
+}
+#leaves {
+  position: absolute;
+  left: 25%;
+  top: 7%;
+}
+
+/*设置联系文字*/
+#center-cu {
+  font-size: 65px;
+  color: darkslategrey;
+  width: 45%;
+  margin: 2% auto -12%;
+  text-align: center;
+}
+#request {
+  width: 60%;
+  margin: 15% auto 10%;
+}
+#request p {
+  font-size: 30px;
+  line-height: 50px;
+}
+#request :nth-child(4) {
+  color: slategrey;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+
+/*设置按钮*/
+#a-wrapper {
+  width: 60%;
+  bottom: 10%;
+  margin-left: 23%;
+  position: absolute;
+}
+#a1,
+#a2,
+#a3 {
+  font-size: 20px;
+  background-color: forestgreen;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 8px 25px;
+  margin: 0 3%;
+  color: aliceblue;
+  transition: transform 0.5s;
+  display: inline-block;
+}
+#a1:hover,
+#a2:hover,
+#a3:hover {
+  transform: scale(1.05);
+  background-color: green;
+  color: silver;
+}
+
+/*设置问答部分块*/
+.QA-wrapper {
+  width: 90%;
+  /* height: 1500px; */
+  border: 10px solid cornflowerblue;
+  border-radius: 25px;
+  margin: 150px auto 150px;
+  background-image: url(./images/background_QA.png);
+}
+
+#center-QA {
+  color: black;
+  font-size: 65px;
+  width: 58%;
+  margin: 2% auto -12%;
+  text-align: center;
+}
+#blueimg {
+  z-index: -99;
+}
+
+#QA-list {
+  /* border: 1px solid black; */
+  margin: 300px auto 200px;
+  width: 60%;
+}
+#QA-ul a {
+  display: block;
+  line-height: 80px;
+  font-size: 30px;
+  color: black;
+  transition: all 0.7s;
+}
+#QA-ul p {
+  padding: 10px;
+  font-size: 27px;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+#QA-ul a:hover {
+  color: lightslategrey;
+  transform: scale(1.1);
+}
+
+/*设置footer*/
+.footer {
+  height: 80px;
+  width: 100%;
+  border: 1px gray solid;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: transparent;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  background-color: rgba(246, 247, 248);
+}
+
+#footer1 {
+  font-size: 15px;
+  width: 60%;
+  margin: 25px auto 0;
+  text-align: center;
+}
+#footer2 {
+  font-size: 15px;
+  width: 60%;
+  margin: 5px auto 0px;
+  text-align: center;
+}
+
+/*设置固定返回块*/
+.pointer {
+  position: fixed;
+  right: 10px;
+  bottom: 60px;
+  height: 46px;
+  width: 51px;
+  overflow: hidden;
+}
+.pointer div {
+  width: 45px;
+  height: 40px;
+  border: 3px solid black;
+  position: absolute;
+  transition: all 0.5s;
+  border-radius: 15px;
+  background-color: aliceblue;
+}
+#pointer1 {
+  top: 0px;
+  left: 0px;
+}
+#pointer2 {
+  top: 49px;
+  left: 0px;
+}
+.pointer:hover #pointer1 {
+  top: -49px;
+  left: 0px;
+}
+.pointer:hover #pointer2 {
+  top: 0px;
+  left: 0px;
+}
+
+.pointer p {
+  font-size: 20px;
+  display: inline-block;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
